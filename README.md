@@ -9,7 +9,7 @@ php class for PostgreSql database library, based on mysqli for MySql.
 * In contrast to mysqli, pgi class has additional methods, which allow using statements with unknow number of returned columns ``` SELECT * FROM table ```. (see USAGE section)
 
 ## TRANSITION
-for transition from MySQL to PostgreSQL, simply change class initialization. For example:
+for transition from MySQL to PostgreSQL, include pgi.php and simply change class initialization. For example:
 
 * From ``` $db = new mysqli('localhost', 'my_user', 'my_password', 'my_db');  ```
 * To ``` $db = new pgi('localhost', 'my_user', 'my_password', 'my_db');  ```
