@@ -2,24 +2,22 @@
 php class for PostgreSql database library, based on mysqli for MySql.
 
 ## DESCRIPTION
-*The class is written for easy transition from MySQL to PostgreSQL. It was written because we were moving huge project
-*It can also be used for new projects, if you want to use "mysqli" familiar syntax
-*SQL binding is native to postgre php functions. So in contrast to mysqli, pgi isn't more secure than using normal php postgre functions (pg_*). Benefit of using this class is therefore only in structure of the code
-*The class doesn't use all of mysqli properties. Below are described which ones are used (USAGE section)
-*In contrast to mysqli, pgi class has additional methods, which allow using statements with unknow number of returned columns ``` SELECT * FROM table ```. (see USAGE section)
+* The class is written for easy transition from MySQL to PostgreSQL. It was written because we were moving huge project
+* It can also be used for new projects, if you want to use "mysqli" familiar syntax
+* SQL binding is native to postgre php functions. So in contrast to mysqli, pgi isn't more secure than using normal php postgre functions (pg_*). Benefit of using this class is therefore only in structure of the code
+* The class doesn't use all of mysqli properties. Below are described which ones are used (USAGE section)
+* In contrast to mysqli, pgi class has additional methods, which allow using statements with unknow number of returned columns ``` SELECT * FROM table ```. (see USAGE section)
 
 ## TRANSITION
 for transition from MySQL to PostgreSQL, simply change class initialization. For example:
 
-*From ``` $db = new mysqli('localhost', 'my_user', 'my_password', 'my_db');  ```
-
-*To ``` $db = new pgi('localhost', 'my_user', 'my_password', 'my_db');  ```
+* From ``` $db = new mysqli('localhost', 'my_user', 'my_password', 'my_db');  ```
+* To ``` $db = new pgi('localhost', 'my_user', 'my_password', 'my_db');  ```
 
 Then rename all tables, to include schema. For example:
 
-*From ``` SELECT id FROM table_name ```
-
-*To ``` SELECT id FROM schema_name.table_name ```
+* From ``` SELECT id FROM table_name ```
+* To ``` SELECT id FROM schema_name.table_name ```
 
 ## TEST
 Transition was successfully tested on two projects. In both cases there were only some minor issues, due to difference between logic. Only manual work was to rename all tables to include schema.
@@ -52,4 +50,4 @@ Below are listed all methods and described only with their difference to mysqli.
 
 
 ## STRUCTURE
-*PGI class is split on two classes, pgi and pgi_stmt.
+* PGI class is split on two classes, pgi and pgi_stmt.
